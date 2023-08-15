@@ -3,7 +3,7 @@
   "version": "2.2.0",
   "description": "A simple script to allow using Alpine.js in Webflow designer.",
   "scripts": {
-    "build": "esbuild index.js style.css init.js --bundle --minify --sourcemap --outdir=dist",
+    "build": "esbuild index.js style.css init.js components/**/* --bundle --minify --sourcemap --outdir=dist",
     "serve": "esbuild index.js style.css init.js --bundle --outdir=dist --serve=8001",
     "purge": "./purge.sh",
     "prepublish": "npm run build",
