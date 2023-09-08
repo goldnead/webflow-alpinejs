@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../lib/translate.js"],
-  "sourcesContent": ["\n\nconst loadTranslation = async () => {\n  return await fetch('/translations.json').then(resp => resp.json());\n};\n\nexport const translate = async (string, args) => {\n  const i18n = await loadTranslation();\n  let value = get(i18n, string);\n\n  eachRight(args, (paramVal, paramKey) => {\n    value = replace(value, `:${paramKey}`, paramVal);\n  });\n  return value;\n};\n\nexport default translate;"],
-  "mappings": "MAEA,IAAMA,EAAkB,SACf,MAAM,MAAM,oBAAoB,EAAE,KAAKC,GAAQA,EAAK,KAAK,CAAC,EAGtDC,EAAY,MAAOC,EAAQC,IAAS,CAC/C,IAAMC,EAAO,MAAML,EAAgB,EAC/BM,EAAQ,IAAID,EAAMF,CAAM,EAE5B,iBAAUC,EAAM,CAACG,EAAUC,IAAa,CACtCF,EAAQ,QAAQA,EAAO,IAAIE,IAAYD,CAAQ,CACjD,CAAC,EACMD,CACT,EAEOG,EAAQP",
-  "names": ["loadTranslation", "resp", "translate", "string", "args", "i18n", "value", "paramVal", "paramKey", "translate_default"]
-}

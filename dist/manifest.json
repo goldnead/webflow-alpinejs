@@ -1,0 +1,7 @@
+{
+  "init.js": {
+    "file": "init.js",
+    "isEntry": true,
+    "src": "init.js"
+  }
+}
