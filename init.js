@@ -4,8 +4,6 @@ import focus from "@alpinejs/focus";
 import mask from "@alpinejs/mask";
 import intersect from "@alpinejs/intersect";
 
-import App from "./components/App.js";
-
 function getAlpineAttributes(el) {
   const alpineAttributes = [];
   for (let i = 0; i < el.attributes.length; ++i) {
@@ -85,5 +83,10 @@ if (!window.Webflow) {
 }
 window.Webflow.push(() => {
   init();
-  App.mount(Alpine).usePlugins([persist, intersect, focus, mask]).start();
+  Alpine.plugin(persist);
+  Alpine.plugin(focus);
+  Alpine.plugin(mask);
+  Alpine.plugin(intersect);
+
+  Alpine.start();
 });
