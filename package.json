@@ -27,6 +27,10 @@
     "dist/*"
   ],
   "dependencies": {
+    "@alpinejs/focus": "^3.13.0",
+    "@alpinejs/intersect": "^3.13.0",
+    "@alpinejs/mask": "^3.13.0",
+    "@alpinejs/persist": "^3.13.0",
     "alpinejs": "^3.12.3"
   },
   "devDependencies": {
