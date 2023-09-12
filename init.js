@@ -5,6 +5,7 @@ import mask from "@alpinejs/mask";
 import intersect from "@alpinejs/intersect";
 
 import "./components/preheader.js";
+import "./components/session.js";
 
 function getAlpineAttributes(el) {
   const alpineAttributes = [];
