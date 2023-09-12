@@ -15,12 +15,10 @@ document.addEventListener("alpine:init", () => {
         .then((resp) => {
           this.fetched = true;
           this.session = resp;
-          console.log(this.session);
         })
         .catch(() => {
           this.fetched = false;
         });
-      console.log(this);
     },
     get eventURL() {
       return "https://cal.com/booking/" + this.id;
